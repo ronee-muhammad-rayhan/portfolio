@@ -3,6 +3,17 @@ import { useState } from 'react'
 // import viteLogo from '/vite.svg'
 import './App.css'
 // import { NavLink } from 'react-router-dom'
+import profile from "../public/assets/images/profile.png"
+import banner from "../public/assets/images/banner.jpg"
+import html from "../src/assets/images/icons/HTML.png"
+import css from "../src/assets/images/icons/css.png"
+import js from "../src/assets/images/icons/JavaScript.png"
+import node from "../src/assets/images/icons/node.png"
+import express from "../src/assets/images/icons/express.png"
+import mongo from "../src/assets/images/icons/mongo.png"
+import tour from "../public/assets/images/tour.png"
+import print from "../public/assets/images/print.png"
+import brand from "../public/assets/images/brand.png"
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,7 +26,7 @@ function App() {
         <header className="p-4 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
           <div className="container flex justify-between h-16 mx-auto relative">
             <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
-              <img className='rounded-full w-10' src="../public/assets/images/profile.png" alt="profile" />
+              <img className='rounded-full w-10' src={profile} alt="profile" />
             </a>
             <ul className="items-stretch hidden space-x-3 lg:flex">
               <li className="flex">
@@ -86,7 +97,7 @@ function App() {
       <main>
         {/* banner section */}
         <section className='w-full mx-auto bg-red-300'>
-          <img className='object-cover h-[600px] w-full' src="../public/assets/images/banner.jpg" alt="banner" />
+          <img className='object-cover h-[600px] w-full' src={banner} alt="banner" />
           {/* <img className='' src="../public/assets/images/banner.avif" alt="banner" width="700px" height="300px" style={{ width: "700px", height: "300px" }} /> */}
         </section>
         {/* about section */}
@@ -108,9 +119,9 @@ function App() {
 
           <br />
           <p className="text-center flex gap-4">
-            <img src="../src/assets/images/icons/HTML.png" />
-            <img src="../src/assets/images/icons/css.png" />
-            <img src="../src/assets/images/icons/JavaScript.png" />
+            <img src={html} />
+            <img src={css} />
+            <img src={js} />
           </p>
           <p className="text-center">
             <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
@@ -118,9 +129,9 @@ function App() {
             </a>
           </p>
           <p className="text-center flex gap-4">
-            <img src="../src/assets/images/icons/node.png" />
-            <img src="../src/assets/images/icons/express.png" />
-            <img src="../src/assets/images/icons/mongo.png" />
+            <img src={node} />
+            <img src={express} />
+            <img src={mongo} />
           </p>
           <br />
         </section>
@@ -130,24 +141,66 @@ function App() {
           <p>I have 1 Year Experience in Web Development especially in frontend focusing on MERN Stack</p>
         </section>
         {/* projects section */}
-        <section>
-          <h3 className="text-4xl text-red-600 font-bold text-center">Projects</h3>
-          <div className="bg-gray-100 text-gray-800">
-            <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-              <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-                <img src="../public/assets/images/tour.png" alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+        <section className='py-10'>
+          <h3 className="text-4xl text-red-600 font-bold text-center pb-3">Projects</h3>
+          <div>
+            <div className="bg-gray-100 text-gray-800">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                  <img src={tour} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+                </div>
+                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                  <h1 className="text-5xl font-bold leadi sm:text-6xl">Tourist Guide
+                    {/* <span className="text-indigo-600">senectus</span>erat pharetra */}
+                  </h1>
+                  <p className="mt-6 mb-8 text-lg sm:mb-12">Tourist Guide is a fully functional website using MERN Stack.
+                    <br className="hidden md:inline lg:hidden" />There are 3 types role 1.tourist, 2.tour-guide and 3.admin.
+                  </p>
+                  <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a rel="noopener noreferrer" href="https://github.com/ronee-muhammad-rayhan/tourist-guide-client.git" className="px-8 py-3 text-lg font-semibold rounded hover:text-red-500 bg-indigo-600 text-gray-50">Client</a>
+                    <a rel="noopener noreferrer" href="https://tour-guide-rmr.web.app/" className="px-8 py-3 text-lg font-semibold border rounded hover:text-red-500 hover:bg-indigo-600 border-gray-800">Live</a>
+                    <a rel="noopener noreferrer" href="https://github.com/ronee-muhammad-rayhan/tourist-guide-server.git" className="px-8 py-3 text-lg font-semibold rounded  hover:text-red-500 bg-indigo-600 text-gray-50">Server</a>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 className="text-5xl font-bold leadi sm:text-6xl">Tourist Guide
-                  {/* <span className="text-indigo-600">senectus</span>erat pharetra */}
-                </h1>
-                <p className="mt-6 mb-8 text-lg sm:mb-12">Tourist Guide is a fully functional website using MERN Stack.
-                  <br className="hidden md:inline lg:hidden" />There are 3 types role 1.tourist, 2.tour-guide and 3.admin.
-                </p>
-                <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                  <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded hover:text-red-500 bg-indigo-600 text-gray-50">Client</a>
-                  <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold border rounded hover:text-red-500 hover:bg-indigo-600 border-gray-800">Live</a>
-                  <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded  hover:text-red-500 bg-indigo-600 text-gray-50">Server</a>
+            </div>
+            <div className="bg-gray-100 text-gray-800">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                  <img src={print} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+                </div>
+                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                  <h1 className="text-5xl font-bold leadi sm:text-6xl">PrintHub Finder
+                    {/* <span className="text-indigo-600">senectus</span>erat pharetra */}
+                  </h1>
+                  <p className="mt-6 mb-8 text-lg sm:mb-12">PrintHub Finder is a fully functional website using MERN Stack.
+                    <br className="hidden md:inline lg:hidden" />There are 3 types role 1.user, 2.service-provider and 3.admin.
+                  </p>
+                  <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a rel="noopener noreferrer" href="https://github.com/ronee-muhammad-rayhan/print-hub-finder-client" className="px-8 py-3 text-lg font-semibold rounded hover:text-red-500 bg-indigo-600 text-gray-50">Client</a>
+                    <a rel="noopener noreferrer" href="https://b8a11-client-print-hub-finder.web.app/" className="px-8 py-3 text-lg font-semibold border rounded hover:text-red-500 hover:bg-indigo-600 border-gray-800">Live</a>
+                    <a rel="noopener noreferrer" href="https://github.com/ronee-muhammad-rayhan/print-hub-finder-server" className="px-8 py-3 text-lg font-semibold rounded  hover:text-red-500 bg-indigo-600 text-gray-50">Server</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gray-100 text-gray-800">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                  <img src={brand} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+                </div>
+                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                  <h1 className="text-5xl font-bold leadi sm:text-6xl">ElecTech BrandShop
+                    {/* <span className="text-indigo-600">senectus</span>erat pharetra */}
+                  </h1>
+                  <p className="mt-6 mb-8 text-lg sm:mb-12">ElecTech BrandShop is a fully functional website using MERN Stack.
+                    <br className="hidden md:inline lg:hidden" />There are 2 types role 1.user, 2.admin.
+                  </p>
+                  <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a rel="noopener noreferrer" href="https://github.com/ronee-muhammad-rayhan/ElecTech-BrandShop-client" className="px-8 py-3 text-lg font-semibold rounded hover:text-red-500 bg-indigo-600 text-gray-50">Client</a>
+                    <a rel="noopener noreferrer" href="https://b8a10-brandshop-electech.web.app/" className="px-8 py-3 text-lg font-semibold border rounded hover:text-red-500 hover:bg-indigo-600 border-gray-800">Live</a>
+                    <a rel="noopener noreferrer" href="https://github.com/ronee-muhammad-rayhan/ElecTech-BrandShop-server.git" className="px-8 py-3 text-lg font-semibold rounded  hover:text-red-500 bg-indigo-600 text-gray-50">Server</a>
+                  </div>
                 </div>
               </div>
             </div>
