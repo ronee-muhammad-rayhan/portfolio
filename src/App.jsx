@@ -23,26 +23,26 @@ function App() {
     <>
       <div id='home'>
         {/* header section */}
-        <header className="p-4 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
+        <header id='header' className="p-4 bg-gray-100 dark:bg-gray-800 dark:text-gray-100">
           <div className="container flex justify-between h-16 mx-auto relative">
-            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
+            <a rel="noopener noreferrer" href="https://roneemrayhan-portfolio.web.app/" aria-label="Back to homepage" className="flex items-center p-2">
               <img className='rounded-full w-10' src={profile} alt="profile" />
             </a>
-            <ul className="items-stretch hidden space-x-3 lg:flex">
+            <ul className="items-stretch hidden space-x-3 lg:flex py-4">
               <li className="flex">
-                <a rel="noopener noreferrer" href="#home" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Home</a>
+                <a rel="noopener noreferrer" href="#home" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Home</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent /*  text-white */">About</a>
+                <a rel="noopener noreferrer" href="#about" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">About</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Skills</a>
+                <a rel="noopener noreferrer" href="#skills" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Skills</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Projects</a>
+                <a rel="noopener noreferrer" href="#projects" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Projects</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Contact</a>
+                <a rel="noopener noreferrer" href="#contact" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Contact</a>
               </li>
             </ul>
             <div className="items-center flex-shrink-0 hidden lg:flex">
@@ -54,21 +54,21 @@ function App() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
-            {showMenu && <ul className="lg:hidden space-x-3 flex flex-col absolute top-28 right-10 bg-slate-400">
+            {showMenu && <ul className="lg:hidden space-x-3 flex flex-col absolute top-20 right-3 bg-slate-400 py-4">
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Home</a>
+                <a rel="noopener noreferrer" href="#home" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Home</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent text-white">About</a>
+                <a rel="noopener noreferrer" href="#about" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">About</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Skills</a>
+                <a rel="noopener noreferrer" href="#skills" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Skills</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Projects</a>
+                <a rel="noopener noreferrer" href="#projects" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Projects</a>
               </li>
               <li className="flex">
-                <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Contact</a>
+                <a rel="noopener noreferrer" href="#contact" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Contact</a>
               </li>
             </ul>}
           </div>
@@ -94,14 +94,14 @@ function App() {
       </p> */}
 
       {/* main part */}
-      <main>
+      <main id='main'>
         {/* banner section */}
-        <section className='w-full mx-auto bg-red-300'>
+        <section id='banner' className='w-full mx-auto bg-red-300'>
           <img className='object-cover h-[600px] w-full' src={banner} alt="banner" />
           {/* <img className='' src="../public/assets/images/banner.avif" alt="banner" width="700px" height="300px" style={{ width: "700px", height: "300px" }} /> */}
         </section>
         {/* about section */}
-        <section>
+        <section id='about' className='py-10'>
           <h3 className="text-4xl text-red-600 font-bold text-center py-10">About</h3>
           <h1>Md. Rayhan Kibria Ronee</h1>
           <h5 className='text-2xl'>React Frontend Developer</h5>
@@ -110,7 +110,7 @@ function App() {
         </section>
 
         {/* skills section */}
-        <section className='flex flex-col justify-center items-center gap-3 py-10'>
+        <section id='skills' className='flex flex-col justify-center items-center gap-3 py-10'>
           <h3 className="text-4xl text-red-600 font-bold text-center">Skills</h3>
 
           <br />
@@ -136,16 +136,16 @@ function App() {
           <br />
         </section>
         {/* experiences section */}
-        <section>
+        <section id='experiences' className='py-10'>
           <h3 className="text-4xl text-red-600 font-bold text-center">Experiences</h3>
           <p>I have 1 Year Experience in Web Development especially in frontend focusing on MERN Stack</p>
         </section>
         {/* projects section */}
-        <section className='py-10'>
+        <section id='projects' className='py-10'>
           <h3 className="text-4xl text-red-600 font-bold text-center pb-3">Projects</h3>
           <div>
             <div className="bg-gray-100 text-gray-800">
-              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-2 lg:py-3 lg:flex-row lg:justify-between">
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                   <img src={tour} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
                 </div>
@@ -165,7 +165,7 @@ function App() {
               </div>
             </div>
             <div className="bg-gray-100 text-gray-800">
-              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-2 lg:py-4 lg:flex-row lg:justify-between">
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                   <img src={print} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
                 </div>
@@ -185,7 +185,7 @@ function App() {
               </div>
             </div>
             <div className="bg-gray-100 text-gray-800">
-              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+              <div className="container flex flex-col justify-center p-6 mx-auto sm:py-2 lg:py-4 lg:flex-row lg:justify-between">
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
                   <img src={brand} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
                 </div>
@@ -207,14 +207,14 @@ function App() {
           </div>
         </section>
         {/* education section */}
-        <section className='py-10'>
+        <section id='education' className='py-10'>
           <h3 className="text-4xl text-red-600 font-bold text-center">Education</h3>
           <p>I have completed PGD-in-ICT in 2016</p>
           <p>I have completed B.Sc. Engineering in 2015</p>
           <p></p>
         </section>
         {/* contact information section */}
-        <section className="py-6 bg-gray-100 dark:bg-gray-800 dark:text-gray-50">
+        <section id='contact' className="py-6 bg-gray-100 dark:bg-gray-700 dark:text-gray-50">
           <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
             <div className="py-6 md:py-0 md:px-6">
               <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -244,11 +244,11 @@ function App() {
             <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
               <label className="block">
                 <span className="mb-1">Full name</span>
-                <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" spellCheck="false" data-ms-editor="true" />
+                <input type="text" placeholder="Leroy Jenkins" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800 py-2 px-2" spellCheck="false" data-ms-editor="true" />
               </label>
               <label className="block">
                 <span className="mb-1">Email address</span>
-                <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800" />
+                <input type="email" placeholder="leroy@jenkins.com" className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800 py-2 px-2" />
               </label>
               <label className="block">
                 <span className="mb-1">Message</span>
@@ -262,14 +262,14 @@ function App() {
       </main>
 
       {/* footer section */}
-      <footer className="bg-gray-200 dark:bg-gray-800 dark:text-gray-50">
+      <footer id='footer' className="bg-gray-200 dark:bg-gray-800 dark:text-gray-50">
         <div className="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row dark:divide-gray-400">
           <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
             <li><a href='#home'>Home</a></li>
-            <li><a href='#home'>About</a></li>
-            <li><a href='#home'>Skills</a></li>
-            <li><a href='#home'>Projects</a></li>
-            <li><a href='#home'>Contact</a></li>
+            <li><a href='#about'>About</a></li>
+            <li><a href='#skills'>Skills</a></li>
+            <li><a href='#projects'>Projects</a></li>
+            <li><a href='#contact'>Contact</a></li>
           </ul>
           <div className="flex flex-col justify-center pt-6 lg:pt-0">
             <div className="flex justify-center space-x-4">
