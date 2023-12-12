@@ -72,7 +72,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a> */}
       </div>
-      <h1>Ronee M Rayhan</h1>
+      {/* <h1>Ronee M Rayhan</h1> */}
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -87,7 +87,46 @@ function App() {
 
       {/* main part */}
       <main>
-        {/* contact section */}
+        {/* banner section */}
+        {/* about section */}
+        <section>
+          <h3 className="text-4xl text-red-600 font-bold text-center py-10">About</h3>
+          <h1>Md. Rayhan Kibria Ronee</h1>
+          <h5 className='text-2xl'>React Frontend Developer</h5>
+          <h5 className='text-2xl'>I&apos;m from Bangladesh. Currently working with frontend using react and tailwind focusing on the MERN Stack.</h5>
+          <a href='/Resume_RoneeMRayhan.pdf' download={true} className='text-3xl text-right'>Download Resume</a>
+        </section>
+
+        {/* skills section */}
+        <section className='flex flex-col justify-center items-center gap-3 py-10'>
+          <h3 className="text-4xl text-red-600 font-bold text-center">Skills</h3>
+
+          <br />
+
+          Technologies that I know
+
+          <br />
+          <p className="text-center flex gap-4">
+            <img src="../src/assets/images/icons/HTML.png" />
+            <img src="../src/assets/images/icons/css.png" />
+            <img src="../src/assets/images/icons/JavaScript.png" />
+          </p>
+          <p className="text-center">
+            <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
+              <img src="https://skillicons.dev/icons?i=react,tailwind,firebase" />
+            </a>
+          </p>
+          <p className="text-center flex gap-4">
+            <img src="../src/assets/images/icons/node.png" />
+            <img src="../src/assets/images/icons/express.png" />
+            <img src="../src/assets/images/icons/mongo.png" />
+          </p>
+          <br />
+        </section>
+        {/* experiences section */}
+        {/* projects section */}
+        {/* education section */}
+        {/* contact information section */}
         <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
           <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
             <div className="py-6 md:py-0 md:px-6">
@@ -132,6 +171,7 @@ function App() {
             </form>
           </div>
         </section>
+
       </main>
 
       {/* footer section */}
